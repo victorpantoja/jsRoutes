@@ -2,6 +2,10 @@
 
 jsRoute has been designed to manage routes in web pages using javascript.
 
+Imagine you have a page example.com that shows an agenda. Now, imagine you have example.com#11-04-2012 and you
+want to show only events happening this day. Why could you worry about this hash if jsRoute can do it for you
+in a very simple way?
+
 == Example
 
 route.add('^$', function(){
