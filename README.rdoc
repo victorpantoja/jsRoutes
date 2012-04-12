@@ -17,10 +17,4 @@ route.add('^\\d{1,2}\\-\\d{1,2}\-\\d{4}$', function(day){
 
 There are no known issues at the time.
 
-This class was tested and works on the following browsers:
-  * Internet Explorer 6
-  * Internet Explorer 7
-  * Firefox 2
-  * Firefox 3
-  * Opera 9.4
 
