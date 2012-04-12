@@ -1,0 +1,26 @@
+= jsRoute
+
+jsRoute has been designed to manage routes in web pages using javascript.
+
+== Example
+
+route.add('^$', function(){
+	//DO SOME STUFF HERE;
+});
+
+route.add('^\\d{1,2}\\-\\d{1,2}\-\\d{4}$', function(day){
+	// GET A STRING LIKE 11-04-2012
+	console.debug(dia);
+});
+
+== Known Issues
+
+There are no known issues at the time.
+
+This class was tested and works on the following browsers:
+  * Internet Explorer 6
+  * Internet Explorer 7
+  * Firefox 2
+  * Firefox 3
+  * Opera 9.4
+
