@@ -10,7 +10,7 @@ route.add('^$', function(){
 
 route.add('^\\d{1,2}\\-\\d{1,2}\-\\d{4}$', function(day){
 	// GET A STRING LIKE 11-04-2012
-	console.debug(dia);
+	console.debug(day);
 });
 
 == Known Issues
