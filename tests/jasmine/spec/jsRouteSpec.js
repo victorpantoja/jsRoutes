@@ -1,8 +1,7 @@
 describe("jsRoute", function() {
 
 	beforeEach(function() {
-		//route.routes = [];
-		//route.funcs = [];
+
 	});
 
 	it("should be able to add routes", function() {
@@ -21,6 +20,25 @@ describe("jsRoute", function() {
 		
 		runs(function(){
 			route.init();
+		});
+		
+		waits(1000);
+		
+		runs(function(){
+			expect(location.hash).toEqual('#alterado');
+		});
+		
+	});
+	
+	it("should be able to force a route", function() {		
+		route.add('^\\d{1,2}\\-\\d{1,2}\-\\d{4}$', function(x){
+			if(x==='23-10-2012'){
+				location.hash='#alterado';
+			}
+		});
+		
+		runs(function(){
+			route.call('#23-10-2012');
 		});
 		
 		waits(1000);

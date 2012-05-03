@@ -21,4 +21,8 @@ route.add('^\\d{1,2}\\-\\d{1,2}\-\\d{4}$', function(day){
 
 There are no known issues at the time.
 
+== Change Log
+
+0.2.0: Added a new function "call" to force an execution of a specific route
+
 

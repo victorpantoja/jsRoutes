@@ -26,20 +26,26 @@ var route = {
 		}
 	},
 	
-	_update: function(){
-		var hash = location.hash.slice(1);
-
-		for(i=0; i< this.routes.length; i++){
+	_findAndExecute: function(route){
+		for(var i=0; i< this.routes.length; i++){
 			var re = new RegExp(this.routes[i]);
-			var match = hash.match(re);
+			var match = route.match(re);
 
 			if(match){
 				this.funcs[i](match[0]);
 				return true;
 			}
 		}
-
-		console.log("404 - Route not found!");
+		return false;
+	},
+	
+	_update: function(){
+		var hash = location.hash.slice(1);
+		
+		this._findAndExecute(hash);
+	},
+	
+	call: function(route){
+		this._findAndExecute(route);
 	}
 };
-
