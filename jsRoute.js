@@ -20,7 +20,7 @@ var route = {
 	},
 
 	_check: function() {
-		if( this.actualURL != document.location.href ) {
+		if( document.location.href && this.actualURL != document.location.href ) {
 			this.actualURL = document.location.href;
 			this._update();
 		}
